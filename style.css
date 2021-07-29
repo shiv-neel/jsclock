@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+h1 {
+    position: absolute;
+    display: wrap;
+    margin-bottom: 40px;
+}
+.clock {
+    margin-top: 100px;
+    width: 500px;
+    height: 500px;
+    border: 10px double black;
+    border-radius: 50%;
+    border-width: 10px;
+    position: relative;
+    color: black;
+}
+
+.clock .number {
+    --rotation: 0;
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    text-align: center;
+    justify-content: center;
+    margin-left: 25px;
+    margin-top: 20px;
+    transform: rotate(var(--rotation));
+    font-size: 30px;
+    font-weight: 300;
+    color: black;
+}
+
+.clock .one {
+    --rotation: 30deg;
+}
+.clock .two {
+    --rotation: 60deg;
+}
+.clock .three {
+    --rotation: 90deg;
+}
+.clock .four {
+    --rotation: 120deg;
+}
+.clock .five {
+    --rotation: 150deg;
+}
+.clock .six {
+    --rotation: 180deg;
+}
+.clock .seven {
+    --rotation: 210deg;
+}
+.clock .eight {
+    --rotation: 240deg;
+}
+.clock .nine {
+    --rotation: 270deg;
+}
+.clock .ten {
+    --rotation: 300deg;
+}
+.clock .eleven {
+    --rotation: 330deg;
+}
+
+
+.clock .hand {
+  --rotation: 0;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  border: 1px solid white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform-origin: bottom;
+  z-index: 10;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+  
+  .clock::after {
+    content: '';
+    position: absolute;
+    background-color: black;
+    z-index: 11;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.hour {
+    width: 9px;
+    height: 30%;
+    background: black;
+}
+
+.min {
+    width: 7px;
+    height: 33%;
+    background: black;
+}
+
+.sec {
+    width: 4px;
+    height: 38%;
+    background: red;
+}
